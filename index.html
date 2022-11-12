@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Site</title>
+  </head>
+  <body>
+    <div class="Header">
+      <div>
+        <h1>Welcome to Mattleopold.ml</h1>
+        <p>
+          My name is Matt Leopold! I am a high school senior intrested in
+          computer science and game design.
+        </p>
+        <p>Here you can find my current and past projects.</p>
+      </div>
+      <img src="Profile.jpg" style="align-self: end" />
+    </div>
+
+    <div class="Cards">
+      <a href="https://cat.mattleopold.ml">
+        <img src="CatJamGameplay.png" alt="Cat-Jam Gameplay" />
+
+        <div>
+          <h2>Cat-Jam</h2>
+
+          Cat-Jam is a side-scrolling Unity runner game with voxel graphics. My
+          original concept was in a 2-D pixel style, but when I decided to
+          transition to 3-D I wanted to continue to use the sprites I already
+          made. This new format introduced me to voxel art, 3 dimensional pixel
+          art. This was my first dive into Unity 3-D and the new challenges it
+          brought.
+        </div>
+      </a>
+      <a href="https://museumbreakin-tsa2022.tk/">
+        <img src="Break-In.png" alt="Museum BreakIn Gameplay" />
+        <div>
+          <h2>Museum Breakin</h2>
+
+          Museum Break In is a 2-D turn based stealth game. I created this
+          concept with two of my friends for a game design competition. The most
+          challenging aspect of this game was detecting when the player is
+          inside the view of the guards, alongside the related lighting system.
+          This project was also created in unity. Check it out!
+        </div>
+      </a>
+      <a href="https://blackjack.cy2.me/ ">
+        <img src="Blackjack.png" alt="Blackjack Gameplay" />
+        <div>
+          <h2>React Blackjack</h2>
+
+          Blackjack! This was my final project for computer science and my first
+          time using the React framework. The greatest challenge was
+          understanding how the javascript interacted with the html and css.
+        </div>
+      </a>
+      <a href="https://pong.mattleopold.ml">
+        <img src="Pong.png" alt="Pong Gameplay" />
+        <div>
+          <h2>Pong</h2>
+
+          The classic pong game in a web format! This was my first project with
+          unity. Complete with both a multiplayer and single player mode and
+          pixelated explosions.
+        </div>
+      </a>
+      <a href="https://pop.mattleopold.ml">
+        <img src="Pop.png" alt="Pop Gameplay" />
+        <div>
+          <h2>Html Bubble Wrap</h2>
+
+          A simple relaxing bubble wrap experience with calming music to go with
+          it.
+        </div>
+      </a>
+      <a href="https://github.com/H-137/SurfacePro5Hackintosh">
+        <img src="Hackintosh.png" alt="Hackintosh image" />
+        <div>
+          <h2>Surface Pro 5 Hackintosh</h2>
+
+          My first hackintosh project, running macos on a surface pro 5! It was
+          definitely not an easy journey, but I learned how to use documentation
+          to solve problems I face.
+        </div>
+      </a>
+      <p class = "credits">
+        Made by Matt Leopold with help from Cy Westbrook.
+      </p>
+    </div>
+  </body>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap");
+    .credits{
+      font-family: "Fira Code", monospace;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+      bottom: 0;
+    }
+
+    .Header {
+      background-color: rgb(75, 63, 84);
+      padding: 50px;
+      box-sizing: border-box;
+      text-align: center;
+      color: white;
+      display: flex;
+      align-content: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 600px;
+      overflow-y: auto;
+      height: 100vh;
+    }
+
+    .Cards {
+      display: grid;
+      flex-direction: column;
+      place-items: center;
+      gap: 30px;
+      padding: 40px;
+      padding-top: 30px;
+      overflow: auto;
+      justify-self: right;
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 600px), 1fr));
+      overflow: scroll;
+    }
+
+    .Cards > *:hover {
+      transform: scale(1.05);
+      background-color: rgb(75, 63, 84);
+    }
+
+    .Cards > * {
+      min-width: 480px;
+      width: 100%;
+      height: 400px;
+      background-color: rgb(102, 86, 114);
+      color: white;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 40px;
+      box-sizing: border-box;
+      transition: 0.3s;
+    }
+
+    .Cards > * > * {
+      overflow: auto;
+      height: 100%;
+      flex: 1;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+    }
+
+    * {
+      font-family: "Fira Code", monospace;
+      word-wrap: break-word;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+
+    @media (max-width: 920px) {
+      body {
+        margin: 0;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .Header {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        overflow-y: visible;
+        height: auto;
+      }
+
+      .Header > img {
+        display: none;
+      }
+
+      .Header > * > * {
+        margin: 0;
+      }
+
+      .Cards {
+        padding: 20px;
+        padding-top: 20px;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .Cards > * {
+        flex-direction: column;
+        height: auto;
+        min-width: 0px;
+        justify-self: center;
+      }
+    }
+  </style>
+</html>
