@@ -11,7 +11,7 @@
       <div>
         <h1>Welcome to Mattleopold.ml</h1>
         <p>
-          My name is Matt Leopold! I am a high school senior intrested in
+          My name is Matt Leopold! I am a high school senior interested in
           computer science and game design.
         </p>
         <p>Here you can find my current and past projects.</p>
@@ -30,7 +30,7 @@
           original concept was in a 2-D pixel style, but when I decided to
           transition to 3-D I wanted to continue to use the sprites I already
           made. This new format introduced me to voxel art, 3 dimensional pixel
-          art. This was my first dive into Unity 3-D and the new challenges it
+          art. This was my first dive into Unity 3-D, and the new challenges it
           brought.
         </div>
       </a>
@@ -39,7 +39,7 @@
         <div>
           <h2>Museum Breakin</h2>
 
-          Museum Break In is a 2-D turn based stealth game. I created this
+          Museum Breakin is a 2-D turn based stealth game. I created this
           concept with two of my friends for a game design competition. The most
           challenging aspect of this game was detecting when the player is
           inside the view of the guards, alongside the related lighting system.
@@ -93,13 +93,6 @@
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap");
-    .credits{
-      font-family: "Fira Code", monospace;
-      font-size: 1.5rem;
-      text-align: center;
-      margin-top: 2rem;
-      bottom: 0;
-    }
 
     .Header {
       background-color: rgb(75, 63, 84);
@@ -113,8 +106,7 @@
       align-items: center;
       justify-content: space-between;
       width: 600px;
-      overflow-y: auto;
-      height: 100vh;
+      height: 100%;
     }
 
     .Cards {
@@ -129,6 +121,7 @@
       width: 100%;
       grid-template-columns: repeat(auto-fit, minmax(min(100%, 600px), 1fr));
       overflow: scroll;
+      padding-bottom: 0px;
     }
 
     .Cards > *:hover {
@@ -139,7 +132,6 @@
     .Cards > * {
       min-width: 480px;
       width: 100%;
-      height: 400px;
       background-color: rgb(102, 86, 114);
       color: white;
       border-radius: 8px;
@@ -151,6 +143,7 @@
       padding: 40px;
       box-sizing: border-box;
       transition: 0.3s;
+      height: 400px;
     }
 
     .Cards > * > * {
@@ -163,6 +156,14 @@
       object-fit: cover;
       width: 100%;
       border-radius: 8px;
+    }
+
+    .Header > img {
+      
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      overflow-y: hidden;
     }
 
     body {
@@ -185,6 +186,24 @@
     *::-webkit-scrollbar {
       width: 0px;
       height: 0px;
+    }
+
+    .credits{
+      font-family: "Fira Code", monospace;
+      text-align: center;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      background-color: white;
+      color: grey;
+      margin: 0px;
+      height: 100%;
+    }
+
+    .credits:hover{
+      transform: scale(1.0);
+      background-color: white;
     }
 
     @media (max-width: 920px) {
