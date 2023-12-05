@@ -70,7 +70,7 @@
         </div>
       </a>
 
-      <a href="https://blackjack.cy2.me/ ">
+      <!-- <a href="https://blackjack.cy2.me/ ">
         <img src="Blackjack.png" alt="Blackjack Gameplay" />
         <div>
           <h2>React Blackjack</h2>
@@ -79,7 +79,7 @@
           time using the React framework. The greatest challenge was
           understanding how the javascript interacted with the html and css.
         </div>
-      </a>
+      </a> -->
       <a href="https://pong.mattleopold.ml">
         <img src="Pong.png" alt="Pong Gameplay" />
         <div>
@@ -233,6 +233,7 @@
         background-color: white;
         display: flex;
         flex-direction: column;
+        overflow: scroll;
       }
 
       .Header {
@@ -240,7 +241,6 @@
         padding: 20px;
         box-sizing: border-box;
         text-align: center;
-        overflow-y: visible;
         height: auto;
       }
 
@@ -257,6 +257,8 @@
         padding-top: 20px;
         margin: 0;
         box-sizing: border-box;
+        height: auto;
+        overflow: visible;
       }
 
       .Cards > * {
@@ -264,6 +266,12 @@
         height: auto;
         min-width: 0px;
         justify-self: center;
+      }
+
+      .Cards > * > div{
+        height: 100%;
+        overflow-y: visible;
+
       }
     }
   </style>
